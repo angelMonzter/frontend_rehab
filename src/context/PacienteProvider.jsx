@@ -2,7 +2,7 @@ import { useState, useEffect, createContext } from "react";
 import axiosInstance from '../config/axios';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:4000'); // Asegúrate de que la URL coincide con tu backend
+const socket = io(process.env.REACT_APP_API_URL); // Asegúrate de que la URL coincide con tu backend
 
 const PacienteContext = createContext();
 
